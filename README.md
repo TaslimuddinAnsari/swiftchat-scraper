@@ -45,11 +45,13 @@ There one folder (swiftchat) and it has a single file-
     cd swiftchat-scraper/
     ```
 
+   - Navigate to the scraper file
     ```bash
      cd scrap-data/
     ```
-   - Run the command
 
+   - Run the command
+   
     ```bash
      python3 scrap-data.py
     ```
