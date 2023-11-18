@@ -41,20 +41,23 @@ There one folder (swiftchat) and it has a single file-
 - scrap-data.py
 
 ### Execute the scrape
+- Navigate to working directory: 
+
     ```bash
     cd swiftchat-scraper/
     ```
+- Navigate to the scraper file:
 
-   - Navigate to the scraper file
     ```bash
-     cd scrap-data/
+    cd scrap-data/
     ```
 
-   - Run the command
-   
+- Run the command:
+
     ```bash
-     python3 scrap-data.py
+    python3 scrap-data.py
     ```
+    
 ### Script Overview
 - The script makes a request to the Facebook Graph API to retrieve posts within the specified date range.
 - It handles paginated responses, fetching all available pages of posts.
