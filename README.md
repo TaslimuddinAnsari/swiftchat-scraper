@@ -31,8 +31,9 @@ Before running the script, make sure you have the following:
       ```bash
       pip install -r requirements.txt
       ```
-    3. Replace the access_token variable with your Facebook Graph API access token.
-    4. Set the from_data and to_data variables to define the date range for extracting posts.
+   
+   3. Replace the access_token variable with your Facebook Graph API access token.
+   4. Set the from_data and to_data variables to define the date range for extracting posts.
 
 ### Project Structure
 There one folder (swiftchat) and it has a single file- 
