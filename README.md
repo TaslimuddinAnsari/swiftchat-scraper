@@ -35,19 +35,22 @@ Before running the script, make sure you have the following:
     4. Set the from_data and to_data variables to define the date range for extracting posts.
 
 ### Project Structure
-There one folder (swiftchat) and it has a single file:
+There one folder (swiftchat) and it has a single file- 
+
 - scrap-data.py
 
 ### Execute the scrape
     ```bash
     cd swiftchat-scraper/
     ```
+
     ```bash
-   cd scrap-data/
-   ```
+     cd scrap-data/
+    ```
    - Run the command
+
     ```bash
-    python3 scrap-data.py
+     python3 scrap-data.py
     ```
 ### Script Overview
 - The script makes a request to the Facebook Graph API to retrieve posts within the specified date range.
