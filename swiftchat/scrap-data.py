@@ -12,6 +12,18 @@ response = requests.get(url)
 
 data = json.loads(response.text)
 
+
+def save_json(data, file):
+    with open(file, 'w', encoding='utf-8') as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=2)
+
+def save_csv(data, file):
+    # Convert the list to a DataFrame
+    df = pd.DataFrame(data)
+    # Save the DataFrame to an CSV file
+    df.to_csv(file, index=False)
+
+
 def get_next_page(current_json_data):
     if 'paging' in current_json_data and 'next' in current_json_data['paging']:
 
@@ -67,10 +79,13 @@ if 'data' in data:
         else:
             print("No data found in the response.")
     
-    # print(extracted_data_list[22526])
-    # Convert the list to a DataFrame
-    df = pd.DataFrame(extracted_data_list)
-    # Save the DataFrame to an Excel file
-    df.to_excel('posts.xlsx', index=False)
+
+    json_file = 'extracted_data.json'
+    csv_file = 'extracted_data.csv'
+
+    save_json(extracted_data_list, json_file)
+    save_csv(extracted_data_list, csv_file)
+
+
 else:
     print("No data found in the response.")
