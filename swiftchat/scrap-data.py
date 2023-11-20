@@ -1,12 +1,25 @@
 import requests
 import pandas as pd
 import json
+import os
+from dotenv import load_dotenv
 
-from_data = '2019-01-01' 
-to_data = '2023-11-15' 
-access_token = 'EAAFFqzOZCkaYBOzjdCcWPdckArjkxY93P0BRoZA6y69eObPsTpL6DqBX5OaQ8JJfxCXxI3sSdl47CDs1rHmJUv5ZCZCrtgZBcaLHVs4x8KHCmUW7HxuI2qPsM2rZAZBYWCb3rVZCi66rrdBkPQm1CfPmk56liU61EOkZCRmm21JYqBiq4fn0liE2CyogNTozXloEZD'
+# Load variables from .env file
+load_dotenv()
 
-url = f'https://graph.facebook.com/v18.0/jayantsinhabjp/posts?fields=id,message,created_time&since={from_data}&until={to_data}&access_token={access_token}'
+from_data = os.getenv('FROM_DATA')
+to_data = os.getenv('TO_DATA')
+access_token = os.getenv('ACCESS_TOKEN')
+URL = os.getenv('URL')
+
+
+print(URL)
+
+# from_data = '2019-01-01' 
+# to_data = '2023-11-15' 
+# access_token = 'EAAFFqzOZCkaYBOzjdCcWPdckArjkxY93P0BRoZA6y69eObPsTpL6DqBX5OaQ8JJfxCXxI3sSdl47CDs1rHmJUv5ZCZCrtgZBcaLHVs4x8KHCmUW7HxuI2qPsM2rZAZBYWCb3rVZCi66rrdBkPQm1CfPmk56liU61EOkZCRmm21JYqBiq4fn0liE2CyogNTozXloEZD'
+
+url = f'{URL}/posts?fields=id,message,created_time&since={from_data}&until={to_data}&access_token={access_token}'
 
 response = requests.get(url)
 

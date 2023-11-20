@@ -1,0 +1,6 @@
+# Virtual Environment
+.env
+env/
+ENV/
+
+.~lock.extracted_data.csv#
