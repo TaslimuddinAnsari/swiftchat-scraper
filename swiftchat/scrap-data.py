@@ -67,10 +67,9 @@ if 'data' in data:
         else:
             print("No data found in the response.")
     
-    # print(extracted_data_list)
+    # print(extracted_data_list[22526])
     # Convert the list to a DataFrame
     df = pd.DataFrame(extracted_data_list)
-
     # Save the DataFrame to an Excel file
     df.to_excel('posts.xlsx', index=False)
 else:
